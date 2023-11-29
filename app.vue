@@ -1,3 +1,9 @@
 <template>
-  <div>heloo</div>
+  <div>
+    <NavbarMenu />
+    <NuxtPage />
+    <FooterMenu />
+  </div>
 </template>
+
+<script setup lang="ts"></script>
