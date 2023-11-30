@@ -1,9 +1,7 @@
 <template>
     <div>
-      <nuxt/>
+        <nuxt />
     </div>
-  </template>
-  
-  <script setup lang="ts">  
+</template>
 
-  </script>
+<script setup lang="ts"></script>
