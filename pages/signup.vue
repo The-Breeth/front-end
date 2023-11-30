@@ -1,11 +1,7 @@
 <template>
-   
     <div>
-      <UserSignUpForm />
+        <UserSignUpForm />
     </div>
-  </template>
-  
-  <script setup lang="ts">
-  
+</template>
 
-  </script>
+<script setup lang="ts"></script>
