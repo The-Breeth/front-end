@@ -1,16 +1,162 @@
 <template>
-    <div class="container mx-auto p-4">
-        <form @submit.prevent="login">
-            <div class="mb-4">
-                <label for="username" class="block text-sm font-medium text-gray-600">Username</label>
-                <input id="username" v-model="username" type="text" name="username" class="mt-1 p-2 w-full border rounded-md" />
+    <div class="min-h-screen flex items-center justify-center bg-[#6f42c1] p-4">
+        <div class="max-w-md w-full space-y-8">
+            <div class="bg-[#5a189a] text-white rounded-lg p-8 shadow-lg">
+                <div class="flex justify-center mb-8">
+                    <img class="mx-auto h-12 w-auto" src="/placeholder.svg" alt="Breeth Logo" width="48" height="48" style="aspect-ratio: 48 / 48; object-fit: cover" />
+                </div>
+                <h2 class="mt-6 text-center text-3xl font-extrabold">Login</h2>
+                <form class="mt-8 space-y-6" action="#" method="POST">
+                    <div class="rounded-md shadow-sm -space-y-px">
+                        <div>
+                            <label for="email-address" class="sr-only"> Email address </label>
+                            <input
+                                id="email-address"
+                                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 rounded-t-md"
+                                autocomplete="email"
+                                required="true"
+                                placeholder="Email"
+                                type="email"
+                                name="email"
+                            />
+                        </div>
+                        <div>
+                            <label for="password" class="sr-only"> Password </label>
+                            <input
+                                id="password"
+                                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 rounded-b-md"
+                                autocomplete="current-password"
+                                required="true"
+                                placeholder="Password"
+                                type="password"
+                                name="password"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <button
+                                id="remember-me"
+                                type="button"
+                                role="checkbox"
+                                aria-checked="false"
+                                data-state="unchecked"
+                                value="on"
+                                class="peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
+                            ></button>
+                            <input
+                                aria-hidden="true"
+                                tabindex="-1"
+                                type="checkbox"
+                                value="on"
+                                style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px"
+                            />
+                            <label for="remember-me" class="ml-2 block text-sm text-white"> Remember me </label>
+                        </div>
+                        <div class="text-sm">
+                            <a class="font-medium text-indigo-200 hover:text-indigo-100" href="#"> Forgot your password? </a>
+                        </div>
+                    </div>
+                    <div>
+                        <button
+                            class="items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#9d4edd] hover:bg-[#c77dff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            type="submit"
+                        >
+                            Login
+                        </button>
+                    </div>
+                </form>
+                <div class="mt-6 grid grid-cols-4 gap-3">
+                    <div>
+                        <button
+                            class="items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-[#7b2cbf] text-sm font-medium text-white hover:bg-[#9d4edd]"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="h-5 w-5 text-white"
+                            >
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-[#7b2cbf] text-sm font-medium text-white hover:bg-[#9d4edd]"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="h-5 w-5 text-white"
+                            >
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <line x1="21.17" x2="12" y1="8" y2="8"></line>
+                                <line x1="3.95" x2="8.54" y1="6.06" y2="14"></line>
+                                <line x1="10.88" x2="15.46" y1="21.94" y2="14"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-[#7b2cbf] text-sm font-medium text-white hover:bg-[#9d4edd]"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="h-5 w-5 text-white"
+                            >
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                                ></path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-[#7b2cbf] text-sm font-medium text-white hover:bg-[#9d4edd]"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="h-5 w-5 text-white"
+                            >
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="mb-4">
-                <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
-                <input id="password" v-model="password" type="password" name="password" class="mt-1 p-2 w-full border rounded-md" />
-            </div>
-            <button type="submit" class="bg-blue-500 text-white p-2 rounded-md">Login</button>
-        </form>
+        </div>
     </div>
 </template>
 

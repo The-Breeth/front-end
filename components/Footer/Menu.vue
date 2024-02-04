@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-gray-800 text-white p-4">
+    <footer class="flex bg-gray-800 text-white p-4">
         <div class="container mx-auto flex flex-col items-center">
             <!-- Navigation Links -->
             <nav class="mb-4">
