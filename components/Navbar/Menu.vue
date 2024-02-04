@@ -9,10 +9,10 @@
 
             <!-- Navigation Links -->
             <div class="hidden md:flex space-x-4">
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/about">About</NavLink>
-                <NavLink to="/pricing">Pricing</NavLink>
-                <NavLink to="/plans">Plans</NavLink>
+                <nuxt-link to="/">Home</nuxt-link>
+                <nuxt-link to="/about">About</nuxt-link>
+                <nuxt-link to="/pricing">Pricing</nuxt-link>
+                <nuxt-link to="/plans">Plans</nuxt-link>
             </div>
 
             <!-- Buttons -->

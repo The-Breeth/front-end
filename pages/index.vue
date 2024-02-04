@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nuxt />
+        <BreethHome />
     </div>
 </template>
 
